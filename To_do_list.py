@@ -70,17 +70,6 @@ class Ui_MainWindow(object):
         self.tabTasks.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-#============================================================== Assign unique object names===========================
-
-        self.DoneButton.setObjectName("doneButton")
-        self.toDoButton.setObjectName("toDoButton")
-        self.inProgressButton.setObjectName("inProgressButton")
-        self.deleteTskButton.setObjectName("deleteButton")
-        self.clearButton.setObjectName("clearButton")
-        self.toDoLabel.setObjectName("toDoLabel")
-        self.inProgressLabel.setObjectName("inProgressLabel")
-        self.doneLabel.setObjectName("doneLabel")
-        self.historyTasks_2.setObjectName("historyTasks_2")
 
 #============================================================== Methods ============================================
     def clear_input(self):

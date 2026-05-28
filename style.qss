@@ -2,10 +2,10 @@ QPushButton{
     border-radius: 10px;
     border: 1px solid #4d4d4d;
 }
-QPushButton#doneButton {
+QPushButton#DoneButton {
     background-color: #0b9667;
 }
-QPushButton#doneButton:hover{
+QPushButton#DoneButton:hover{
     background-color: #028a24
 }
 QPushButton#toDoButton {
@@ -20,10 +20,10 @@ QPushButton#inProgressButton {
 QPushButton#inProgressButton:hover{
     background-color: #dfe20d
 }
-QPushButton#deleteButton {
+QPushButton#deleteTskButton {
     background-color: #f03a3a;
 }
-QPushButton#deleteButton:hover{
+QPushButton#deleteTskButton:hover{
     background-color: #f35050
 }
 QPushButton#clearButton {
@@ -48,4 +48,58 @@ QListWidget#doneLabel {
 QListWidget#historyTasks_2 {
     border: 1px solid #093eaf;
     background-color: #cbd9f7;
+}
+/* QComboBox#fromCurrencyBox {
+    background-color: #b6b909;
+} */
+
+QLineEdit#from_value {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #ffffff;
+    background-color: #78d7b7;
+}
+QLineEdit#to_value {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #ffffff;
+    background-color: #78d7b7;
+}
+/* QComboBox#from_currency {
+    background-color: #78d7b7;
+
+}
+QComboBox#to_currency {
+    background-color: #78d7b7;
+} */
+
+
+QFrame#frameTop {
+    background-color: #78d7b7;
+}
+QFrame#frameButtom {
+    background-color: #c2ecd6;
+}
+
+QPushButton{
+    border: none;
+    color: #05a7a9;
+}
+QPushButton:hover {
+    background-color: #95f7c4;
+}
+QPushButton#button_c{
+    color: #f43e54;
+}
+QPushButton#convert_btn{
+    border: none;
+    color: #05a7a9;
+    background-image: url(./images/Untitled-1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+QPushButton:hover {
+    background-color: #78d7b7;
 }
