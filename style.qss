@@ -1,0 +1,51 @@
+QPushButton{
+    border-radius: 10px;
+    border: 1px solid #4d4d4d;
+}
+QPushButton#doneButton {
+    background-color: #0b9667;
+}
+QPushButton#doneButton:hover{
+    background-color: #028a24
+}
+QPushButton#toDoButton {
+    background-color: #093eaf;
+}
+QPushButton#toDoButton:hover{
+    background-color: #0c4acf
+}
+QPushButton#inProgressButton {
+    background-color: #b6b909;
+}
+QPushButton#inProgressButton:hover{
+    background-color: #dfe20d
+}
+QPushButton#deleteButton {
+    background-color: #f03a3a;
+}
+QPushButton#deleteButton:hover{
+    background-color: #f35050
+}
+QPushButton#clearButton {
+    background-color: #f03a3a;
+}
+QPushButton#clearButton:hover{
+    background-color: #f35050
+}
+QListWidget#toDoLabel {
+    border: 1px solid #093eaf;
+    background-color: #b1c7f7;
+}
+
+QListWidget#inProgressLabel {
+    border: 1px solid #b6b909;
+    background-color: #f5f7b1;
+}
+QListWidget#doneLabel {
+    border: 1px solid #0b9667;
+    background-color: #9df7d9;
+}
+QListWidget#historyTasks_2 {
+    border: 1px solid #093eaf;
+    background-color: #cbd9f7;
+}
