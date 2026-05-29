@@ -2,6 +2,8 @@
 import requests
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
+import re
+from PyQt5.QtWidgets import QMessageBox
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -196,20 +198,30 @@ class Ui_MainWindow(object):
         self.from_value.clear()
         self.to_value.clear()
 
+    def check_input(self, value):
+        ptern= r"^\d+(\.\d{1,2})?$" 
+        return re.match(ptern, value)
+
     def get_data(self):
 
             api_key="44a0c92786b03817601ea22c"
             selected_currency_from = self.from_currency.currentText()
-            amount =float(self.from_value.text())
-            selected_currency_to = self.to_currency.currentText()
+            match_value = self.check_input(self.from_value.text())
 
-            
-            url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{selected_currency_from}"
-            response = requests.get(url)
-            data = response.json()
-            cource = float(data['conversion_rates'][selected_currency_to])
-            result = amount * cource
-            self.to_value.setText(str(result))
+            if match_value:
+
+                amount =float(self.from_value.text())
+                selected_currency_to = self.to_currency.currentText()
+
+                url = f"https://v6.exchangerate-api.com/v6/{api_key}/latest/{selected_currency_from}"
+                response = requests.get(url)
+                data = response.json()
+                cource = float(data['conversion_rates'][selected_currency_to])
+                result = amount * cource
+                self.to_value.setText(str(result))
+            else:
+                QMessageBox.warning(self.centralwidget, "Wrong data", "Please Enter a number or GO TAKE YOUR COFFEE")
+                self.clear_input()
 
 
     def retranslateUi(self, MainWindow):
